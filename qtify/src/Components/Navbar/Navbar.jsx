@@ -21,8 +21,8 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
-import NavbarIcon from "../../assets/Icons/NavbarIcon";
-import Search from "../Search/Searchbar";
+import Logo from "../Logo/Logo";
+import Search from "../Search/Search";
 
 function Navbar() {
   return (
@@ -46,7 +46,7 @@ function Navbar() {
             padding: "0px 32px",
           }}
         >
-          <NavbarIcon />
+          <Logo />
           <Search />
           <Button
             variant="contained"
