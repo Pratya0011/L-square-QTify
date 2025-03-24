@@ -30,22 +30,34 @@ function Navbar() {
       position="fixed"
       sx={{
         zIndex: 1202,
-        borderBottom: "1.5px solid #DAD4DC",
-        boxShadow: "none",
         backgroundColor: "#34C94B",
-        color: "black",
+        m: "0px !important",
+        p: "0px !important",
       }}
     >
-      <Toolbar>
+      <Toolbar sx={{ m: "0px !important", p: "0px !important" }}>
         <Stack
           direction="row"
           justifyContent="space-between"
           alignItems="center"
           width="100%"
+          sx={{
+            height: "74px !important",
+            padding: "0px 32px",
+          }}
         >
           <NavbarIcon />
           <Search />
-          <Button>Give Feedback</Button>
+          <Button
+            variant="contained"
+            sx={{
+              backgroundColor: "#121212",
+              borderRadius: "12px",
+              color: "#34C94B",
+            }}
+          >
+            Give Feedback
+          </Button>
         </Stack>
       </Toolbar>
     </AppBar>
