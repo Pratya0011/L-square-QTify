@@ -1,66 +1,22 @@
 import React from "react";
-import {
-  AppBar,
-  Avatar,
-  Box,
-  Button,
-  Dialog,
-  DialogContent,
-  Divider,
-  Drawer,
-  Grid,
-  IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Menu,
-  MenuItem,
-  Stack,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { Link } from "react-router-dom";
+import ButtonHeader from "../Button/ButtonHeader";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
+import styles from "./Navbar.module.css";
 
-function Navbar() {
+function Navbar({ searchData }) {
   return (
-    <AppBar
-      position="fixed"
-      sx={{
-        zIndex: 1202,
-        backgroundColor: "#34C94B",
-        m: "0px !important",
-        p: "0px !important",
-      }}
-    >
-      <Toolbar sx={{ m: "0px !important", p: "0px !important" }}>
-        <Stack
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-          width="100%"
-          sx={{
-            height: "74px !important",
-            padding: "0px 32px",
-          }}
-        >
-          <Logo />
-          <Search />
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#121212",
-              borderRadius: "12px",
-              color: "#34C94B",
-            }}
-          >
-            Give Feedback
-          </Button>
-        </Stack>
-      </Toolbar>
-    </AppBar>
+    <nav className={styles.navbar}>
+      <Link to="/">
+        <Logo />
+      </Link>
+      <Search
+        placeholder="Search a song of your choice"
+        searchData={searchData}
+      />
+      <ButtonHeader>Give Feedback</ButtonHeader>
+    </nav>
   );
 }
 
