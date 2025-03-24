@@ -9,6 +9,7 @@ function ButtonHeader({ children }) {
         backgroundColor: "#121212",
         borderRadius: "12px",
         color: "#34C94B",
+        fontFamily: "Poppins, sans-serif",
       }}
     >
       {children}
